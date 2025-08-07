@@ -1,234 +1,261 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empresa Profesional - Soluciones Innovadoras</title>
+    <!-- Metadatos básicos para el navegador -->
+    <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la web sea responsive (se adapte a diferentes tamaños de pantalla) -->
+    <title>Empresa Profesional - Soluciones Innovadoras</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Estilos CSS integrados en el HTML -->
     <style>
         /* --- RESET Y ESTILOS BASE --- */
+        /* Un reseteo básico para asegurar que todos los navegadores muestren los elementos de la misma manera */
         * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+            margin: 0; /* Elimina el margen por defecto */
+            padding: 0; /* Elimina el padding por defecto */
+            box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total del elemento */
         }
 
+        /* Definición de variables de color para usar en toda la hoja de estilos */
         :root {
-            --color-primario: #2c3e50;
-            --color-secundario: #3498db;
-            --color-acento: #e74c3c;
-            --color-texto: #333;
-            --color-fondo: #f8f9fa;
-            --color-blanco: #fff;
+            --color-primario: #685800c4;   /* Color principal para fondos oscuros y texto importante */
+            --color-secundario: #3498db; /* Color para enlaces, botones y acentos */
+            --color-acento: #e74c3c;     /* Color para elementos que necesitan destacar (no se usa actualmente) */
+            --color-texto: #333;         /* Color de texto principal sobre fondos claros */
+            --color-fondo: #f8f9fa;      /* Color de fondo general de la página */
+            --color-blanco: #fff;        /* Color blanco */
         }
 
+        /* Estilos generales para el cuerpo (body) de la página */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: var(--color-texto);
-            background-color: var(--color-fondo);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Familia de fuentes principal */
+            line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
+            color: var(--color-texto); /* Usa la variable de color de texto */
+            background-color: var(--color-fondo); /* Usa la variable de color de fondo */
         }
 
         /* --- CABECERA Y NAVEGACIÓN --- */
+        /* Estilo para la cabecera fija en la parte superior */
         header {
-            background-color: var(--color-primario);
-            color: var(--color-blanco);
-            padding: 1rem 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            background-color: var(--color-primario); /* Fondo oscuro */
+            color: #fff260; /* Texto amarillo claro */
+            padding: 1rem 5%; /* Relleno interior (arriba/abajo y a los lados) */
+            display: flex; /* Usa Flexbox para alinear los elementos hijos */
+            justify-content: space-between; /* Distribuye los elementos: logo a la izquierda, nav a la derecha */
+            align-items: center; /* Centra verticalmente los elementos */
+            position: sticky; /* La cabecera se queda fija al hacer scroll */
+            top: 0; /* Se pega en la parte superior de la ventana */
+            z-index: 1000; /* Se asegura que la cabecera esté por encima de otros elementos */
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
         }
 
+        /* Estilo para el logo */
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
+            font-size: 1.8rem; /* Tamaño de la fuente */
+            font-weight: bold; /* Texto en negrita */
+            display: flex; /* Usa Flexbox para alinear el ícono y el texto */
+            align-items: center; /* Centra verticalmente */
         }
 
         .logo i {
-            margin-right: 10px;
-            color: var(--color-secundario);
+            margin-right: 10px; /* Espacio a la derecha del ícono */
+            color: var(--color-secundario); /* Color de acento para el ícono */
         }
 
+        /* Estilo para la lista de navegación */
         nav ul {
-            display: flex;
-            list-style: none;
+            display: flex; /* Muestra los elementos de la lista en una fila */
+            list-style: none; /* Quita los puntos de la lista */
         }
 
         nav li {
-            margin-left: 1.5rem;
+            margin-left: 1.5rem; /* Espacio entre los elementos del menú */
         }
 
+        /* Estilo para los enlaces de navegación */
         nav a {
-            color: var(--color-blanco);
-            text-decoration: none;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
+            color: var(--color-blanco); /* Texto blanco */
+            text-decoration: none; /* Quita el subrayado */
+            font-weight: 500; /* Grosor de la fuente */
+            padding: 0.5rem 1rem; /* Relleno para hacer el área clickeable más grande */
+            border-radius: 4px; /* Bordes redondeados */
+            transition: all 0.3s ease; /* Transición suave para los cambios de estilo */
         }
 
+        /* Estilo para los enlaces al pasar el ratón por encima (hover) o cuando está activo */
         nav a:hover, nav a.active {
-            background-color: var(--color-secundario);
-            color: var(--color-blanco);
+            background-color: var(--color-secundario); /* Cambia el fondo al color secundario */
+            color: var(--color-blanco); /* Mantiene el texto blanco */
         }
 
+        /* Icono de menú para móviles (hamburguesa), oculto por defecto en pantallas grandes */
         .menu-toggle {
-            display: none;
-            cursor: pointer;
-            font-size: 1.5rem;
+            display: none; /* Oculto por defecto */
+            cursor: pointer; /* Cambia el cursor a una mano */
+            font-size: 1.5rem; /* Tamaño del ícono */
         }
 
         /* --- SECCIONES PRINCIPALES --- */
+        /* Estilo base para todas las secciones de la página */
         section {
-            padding: 5rem 5%;
-            min-height: 80vh;
+            padding: 5rem 5%; /* Relleno generoso para separar el contenido de los bordes */
+            min-height: 80vh; /* Altura mínima para que cada sección ocupe una buena parte de la pantalla */
         }
 
+        /* Contenedor principal para centrar el contenido */
         .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            max-width: 1200px; /* Ancho máximo del contenido */
+            margin: 0 auto; /* Centra el contenedor horizontalmente */
         }
 
+        /* Estilo para los títulos de cada sección */
         .seccion-titulo {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            text-align: center; /* Centra el texto */
+            margin-bottom: 3rem; /* Espacio debajo del título */
+            position: relative; /* Necesario para el pseudo-elemento ::after */
         }
 
         .seccion-titulo h2 {
-            font-size: 2.5rem;
-            color: var(--color-primario);
-            margin-bottom: 1rem;
+            font-size: 2.5rem; /* Tamaño del título */
+            color: #2c3e50; /* Color oscuro para el título */
+            margin-bottom: 1rem; /* Espacio debajo del H2 */
         }
 
+        /* Línea decorativa debajo del título de la sección */
         .seccion-titulo::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: var(--color-secundario);
-            margin: 0 auto;
+            content: ''; /* Obligatorio para los pseudo-elementos */
+            display: block; /* Lo convierte en un elemento de bloque */
+            width: 80px; /* Ancho de la línea */
+            height: 4px; /* Grosor de la línea */
+            background: var(--color-secundario); /* Color de la línea */
+            margin: 0 auto; /* Centra la línea */
         }
 
         /* --- SECCIÓN INICIO --- */
+        /* Estilo para la sección de bienvenida (hero) */
         #inicio {
-            display: flex;
-            align-items: center;
-            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3') no-repeat center center/cover;
-            color: var(--color-blanco);
-            text-align: center;
+            display: flex; /* Usa Flexbox para centrar verticalmente el contenido */
+            align-items: center; /* Centra verticalmente */
+            /* Fondo con gradiente oscuro superpuesto a una imagen */
+            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
+            color: #fff260; /* Texto amarillo claro sobre el fondo oscuro */
+            text-align: center; /* Centra el texto */
         }
 
+        /* Contenido de la sección de inicio */
         .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
+            max-width: 800px; /* Ancho máximo para el texto */
+            margin: 0 auto; /* Centrado horizontal */
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
+            font-size: 3.5rem; /* Tamaño grande para el titular principal */
+            margin-bottom: 1.5rem; /* Espacio debajo */
+            line-height: 1.2; /* Altura de línea ajustada */
         }
 
         .hero-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
+            font-size: 1.2rem; /* Tamaño del párrafo introductorio */
+            margin-bottom: 2rem; /* Espacio debajo */
         }
 
+        /* Estilo para los botones */
         .btn {
-            display: inline-block;
-            background-color: var(--color-secundario);
-            color: var(--color-blanco);
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid var(--color-secundario);
+            display: inline-block; /* Se comporta como un bloque pero se alinea en la línea */
+            background-color: var(--color-secundario); /* Color de fondo */
+            color: var(--color-blanco); /* Color de texto */
+            padding: 0.8rem 2rem; /* Relleno interior */
+            border-radius: 30px; /* Bordes muy redondeados (píldora) */
+            text-decoration: none; /* Sin subrayado */
+            font-weight: 600; /* Texto seminegrita */
+            transition: all 0.3s ease; /* Transición suave */
+            border: 2px solid var(--color-secundario); /* Borde del mismo color */
         }
 
+        /* Efecto al pasar el ratón sobre el botón */
         .btn:hover {
-            background-color: transparent;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            background-color: transparent; /* Fondo transparente */
+            transform: translateY(-3px); /* Se mueve ligeramente hacia arriba */
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra para efecto de elevación */
         }
 
         /* --- SECCIÓN NOSOTROS --- */
+        /* Grid para las tarjetas de "Nosotros" */
         .nosotros-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            display: grid; /* Usa CSS Grid para el layout */
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
+            gap: 2rem; /* Espacio entre las tarjetas */
+            margin-top: 2rem; /* Espacio arriba */
         }
 
+        /* Estilo de cada tarjeta */
         .nosotros-card {
-            background: var(--color-blanco);
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            background: var(--color-blanco); /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Oculta lo que se salga de la tarjeta */
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra sutil */
+            transition: transform 0.3s ease; /* Transición para el efecto hover */
         }
 
         .nosotros-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-10px); /* Se eleva al pasar el ratón */
         }
 
+        /* Imagen o ícono de la tarjeta */
         .card-img {
-            height: 200px;
-            background-color: var(--color-secundario);
+            height: 200px; /* Altura fija */
+            background-color: var(--color-secundario); /* Fondo de color */
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
         .card-img i {
-            font-size: 4rem;
-            color: var(--color-blanco);
+            font-size: 4rem; /* Tamaño grande para el ícono */
+            color: var(--color-blanco); /* Ícono blanco */
         }
 
+        /* Contenido de texto de la tarjeta */
         .card-content {
-            padding: 1.5rem;
+            padding: 1.5rem; /* Relleno interior */
         }
 
         .card-content h3 {
-            color: var(--color-primario);
-            margin-bottom: 1rem;
+            color: var(--color-primario); /* Título oscuro */
+            margin-bottom: 1rem; /* Espacio debajo */
         }
 
         /* --- SECCIÓN SERVICIOS --- */
         #servicios {
-            background-color: var(--color-blanco);
+            background-color: var(--color-blanco); /* Fondo blanco para esta sección */
         }
 
+        /* Grid para las tarjetas de servicios */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
+        /* Estilo para cada tarjeta de servicio */
         .servicio {
-            background: var(--color-fondo);
-            padding: 2rem;
+            background: var(--color-fondo); /* Fondo ligeramente gris */
+            padding: 4rem 2rem;
             border-radius: 10px;
-            text-align: center;
-            transition: all 0.3s ease;
-            border-left: 4px solid var(--color-secundario);
+            text-align: center; /* Texto centrado */
+            transition: all 0.3s ease; /* Transición suave */
+            border-left: 4px solid var(--color-secundario); /* Borde izquierdo de acento */
         }
 
         .servicio:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transform: translateY(-10px); /* Se eleva al pasar el ratón */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra más pronunciada */
         }
 
         .servicio i {
-            font-size: 3rem;
-            color: var(--color-secundario);
-            margin-bottom: 1.5rem;
+            font-size: 3rem; /* Tamaño del ícono */
+            color: var(--color-secundario); /* Color de acento */
+            margin-bottom: 1.5rem; /* Espacio debajo */
         }
 
         .servicio h3 {
@@ -238,21 +265,23 @@
         }
 
         /* --- FORMULARIO DE CONTACTO --- */
+        /* Contenedor para la información de contacto y el formulario */
         .contacto-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
         }
 
+        /* Columna de información de contacto */
         .contacto-info {
             display: flex;
-            flex-direction: column;
-            gap: 1.5rem;
+            flex-direction: column; /* Elementos en columna */
+            gap: 1.5rem; /* Espacio entre ítems */
         }
 
         .info-item {
             display: flex;
-            align-items: flex-start;
+            align-items: flex-start; /* Alinea íconos y texto */
             gap: 1rem;
         }
 
@@ -262,45 +291,50 @@
             margin-top: 5px;
         }
 
+        /* Estilos para el formulario */
         .form-group {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.5rem; /* Espacio entre campos del formulario */
         }
 
         .form-group label {
-            display: block;
+            display: block; /* La etiqueta ocupa su propia línea */
             margin-bottom: 0.5rem;
             font-weight: 500;
         }
 
+        /* Estilo para los campos de texto y email */
         .form-control {
-            width: 100%;
+            width: 100%; /* Ocupa todo el ancho disponible */
             padding: 0.8rem;
-            border: 1px solid #ddd;
+            border: 1px solid #ddd; /* Borde sutil */
             border-radius: 4px;
-            font-family: inherit;
+            font-family: inherit; /* Usa la misma fuente que el resto de la página */
             font-size: 1rem;
         }
 
+        /* Estilo específico para el área de texto (mensaje) */
         textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
+            min-height: 150px; /* Altura mínima */
+            resize: vertical; /* Permite al usuario cambiar la altura verticalmente */
         }
 
         /* --- PIE DE PÁGINA --- */
         footer {
-            background-color: var(--color-primario);
-            color: var(--color-blanco);
+            background-color: var(--color-primario); /* Fondo oscuro */
+            color: #fff260; /* Texto amarillo claro */
             padding: 3rem 5%;
         }
 
+        /* Contenedor del pie de página con varias columnas */
         .footer-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
+        /* Títulos en el pie de página */
         .footer-col h3 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
@@ -308,6 +342,7 @@
             padding-bottom: 0.5rem;
         }
 
+        /* Línea decorativa para los títulos del pie de página */
         .footer-col h3::after {
             content: '';
             position: absolute;
@@ -322,9 +357,10 @@
             margin-bottom: 1rem;
         }
 
+        /* Enlaces a redes sociales */
         .social-links {
             display: flex;
-            gap: 1rem;
+            gap: 1rem; /* Espacio entre íconos */
             margin-top: 1rem;
         }
 
@@ -334,55 +370,63 @@
             justify-content: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255,255,255,0.1);
+            background-color: rgba(255,255,255,0.1); /* Fondo semitransparente */
             color: var(--color-blanco);
-            border-radius: 50%;
+            border-radius: 50%; /* Círculo perfecto */
             transition: all 0.3s ease;
         }
 
         .social-links a:hover {
-            background-color: var(--color-secundario);
-            transform: translateY(-5px);
+            background-color: var(--color-secundario); /* Cambia de color al pasar el ratón */
+            transform: translateY(-5px); /* Se eleva ligeramente */
         }
 
+        /* Copyright al final del pie de página */
         .copyright {
             text-align: center;
             padding-top: 2rem;
             margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
+            border-top: 1px solid rgba(255,255,255,0.1); /* Línea divisoria sutil */
         }
 
         /* --- RESPONSIVE --- */
+        /* Media Query para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
+            /* Muestra el ícono de menú hamburguesa */
             .menu-toggle {
                 display: block;
             }
-            
+
+            /* Oculta el menú de navegación por defecto en móviles */
             nav ul {
-                position: absolute;
-                top: 100%;
+                position: absolute; /* Posición absoluta para superponerse al contenido */
+                top: 100%; /* Justo debajo de la cabecera */
                 left: 0;
                 width: 100%;
                 background-color: var(--color-primario);
-                flex-direction: column;
+                flex-direction: column; /* Menú en columna */
                 align-items: center;
                 padding: 1rem 0;
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                /* Animación para desplegar el menú */
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Oculto (sin altura) */
                 transition: all 0.4s ease;
             }
-            
+
+            /* Muestra el menú cuando tiene la clase 'active' (controlado por JS) */
             nav ul.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Visible (altura completa) */
             }
-            
+
             nav li {
-                margin: 0.5rem 0;
+                margin: 0.5rem 0; /* Ajusta el margen para la vista en columna */
             }
-            
+
+            /* Ajusta el tamaño del titular principal en móviles */
             .hero-content h1 {
                 font-size: 2.5rem;
             }
-            
+
+            /* Reduce el padding de las secciones en móviles */
             section {
                 padding: 3rem 5%;
             }
@@ -392,13 +436,16 @@
 <body>
     <!-- Cabecera con logo y menú de navegación -->
     <header>
+        <!-- Logo de la empresa -->
         <div class="logo">
-            <i class="fas fa-rocket"></i>
+            <i class="fas fa-rocket"></i> <!-- Icono de Font Awesome -->
             <span>MiEmpresa</span>
         </div>
+        <!-- Botón de menú para dispositivos móviles (hamburguesa) -->
         <div class="menu-toggle">
-            <i class="fas fa-bars"></i>
+            <i class="fas fa-bars"></i> <!-- Icono de Font Awesome -->
         </div>
+        <!-- Menú de navegación principal -->
         <nav>
             <ul>
                 <li><a href="#inicio" class="active">Inicio</a></li>
@@ -409,7 +456,8 @@
         </nav>
     </header>
 
-    <!-- Sección de Inicio -->
+    <!-- Sección de Inicio (Hero) -->
+    <!-- Esta es la primera sección que ven los visitantes -->
     <section id="inicio">
         <div class="container">
             <div class="hero-content">
@@ -421,35 +469,34 @@
     </section>
 
     <!-- Sección Nosotros -->
+    <!-- Presenta información sobre la empresa, su historia, misión y visión -->
     <section id="nosotros">
         <div class="container">
             <div class="seccion-titulo">
                 <h2>Sobre Nosotros</h2>
                 <p>Conoce nuestra historia y valores</p>
             </div>
+            <!-- Un grid con 3 tarjetas -->
             <div class="nosotros-grid">
+                <!-- Tarjeta 1: Historia -->
                 <div class="nosotros-card">
-                    <div class="card-img">
-                        <i class="fas fa-history"></i>
-                    </div>
+                    <div class="card-img"><i class="fas fa-history"></i></div>
                     <div class="card-content">
                         <h3>Nuestra Historia</h3>
                         <p>Fundada en 2010, nuestra empresa ha crecido de manera constante, adaptándose a las necesidades cambiantes del mercado y manteniendo siempre nuestro compromiso con la calidad.</p>
                     </div>
                 </div>
+                <!-- Tarjeta 2: Misión -->
                 <div class="nosotros-card">
-                    <div class="card-img">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
+                    <div class="card-img"><i class="fas fa-bullseye"></i></div>
                     <div class="card-content">
                         <h3>Nuestra Misión</h3>
                         <p>Proporcionar soluciones innovadoras y de alta calidad que impulsen el éxito de nuestros clientes, creando relaciones duraderas basadas en la confianza y el valor añadido.</p>
                     </div>
                 </div>
+                <!-- Tarjeta 3: Visión -->
                 <div class="nosotros-card">
-                    <div class="card-img">
-                        <i class="fas fa-eye"></i>
-                    </div>
+                    <div class="card-img"><i class="fas fa-eye"></i></div>
                     <div class="card-content">
                         <h3>Nuestra Visión</h3>
                         <p>Ser reconocidos como líderes en nuestro sector, destacando por nuestra excelencia operativa, innovación constante y compromiso con el desarrollo sostenible.</p>
@@ -460,12 +507,14 @@
     </section>
 
     <!-- Sección Servicios -->
+    <!-- Muestra los diferentes servicios que ofrece la empresa -->
     <section id="servicios">
         <div class="container">
             <div class="seccion-titulo">
                 <h2>Nuestros Servicios</h2>
                 <p>Soluciones a medida para tu negocio</p>
             </div>
+            <!-- Un grid con 3 tarjetas de servicios -->
             <div class="servicios-grid">
                 <div class="servicio">
                     <i class="fas fa-laptop-code"></i>
@@ -482,26 +531,12 @@
                     <h3>Marketing Digital</h3>
                     <p>Estrategias integrales de marketing digital para aumentar tu presencia online y generar leads cualificados.</p>
                 </div>
-                <div class="servicio">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Soluciones Cloud</h3>
-                    <p>Implementación y gestión de infraestructuras en la nube para optimizar tus operaciones empresariales.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Ciberseguridad</h3>
-                    <p>Protege tus datos y sistemas con nuestras soluciones avanzadas de seguridad informática.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-headset"></i>
-                    <h3>Soporte Técnico</h3>
-                    <p>Asistencia técnica especializada para resolver cualquier problema de forma rápida y eficiente.</p>
-                </div>
             </div>
         </div>
     </section>
 
     <!-- Sección Contacto -->
+    <!-- Contiene información de contacto y un formulario -->
     <section id="contacto">
         <div class="container">
             <div class="seccion-titulo">
@@ -509,70 +544,24 @@
                 <p>Estamos listos para ayudarte</p>
             </div>
             <div class="contacto-container">
+                <!-- Columna con la información de contacto (dirección, teléfono, etc.) -->
                 <div class="contacto-info">
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Ubicación</h3>
-                            <p>Calle Principal #123, Ciudad, País</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Teléfono</h3>
-                            <p>+1 234 567 890</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@miempresa.com</p>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h3>Horario</h3>
-                            <p>Lunes - Viernes: 9:00 - 18:00</p>
-                            <p>Sábado: 10:00 - 14:00</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contacto-form">
-                    <form>
-                        <div class="form-group">
-                            <label for="nombre">Nombre Completo</label>
-                            <input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Correo Electrónico</label>
-                            <input type="email" id="email" class="form-control" placeholder="tu@email.com" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="asunto">Asunto</label>
-                            <input type="text" id="asunto" class="form-control" placeholder="Asunto del mensaje">
-                        </div>
-                        <div class="form-group">
-                            <label for="mensaje">Mensaje</label>
-                            <textarea id="mensaje" class="form-control" placeholder="Tu mensaje..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
-                    </form>
+                    <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h3>Ubicación</h3><p>Calle Principal #123, Ciudad, País</p></div></div>
+                    <div class="info-item"><i class="fas fa-phone"></i><div><h3>Teléfono</h3><p>+1 234 567 890</p></div></div>
+                    <div class="info-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>info@miempresa.com</p></div></div>
+                    <div class="info-item"><i class="fas fa-clock"></i><div><h3>Horario</h3><p>Lunes - Viernes: 9:00 - 18:00</p><p>Sábado: 10:00 - 14:00</p></div></div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pie de página -->
+    <!-- Contiene información final, enlaces y copyright -->
     <footer>
         <div class="footer-container">
+            <!-- Columna 1: Logo y descripción -->
             <div class="footer-col">
-                <div class="logo">
-                    <i class="fas fa-rocket"></i>
-                    <span>MiEmpresa</span>
-                </div>
+                <div class="logo"><i class="fas fa-rocket"></i><span>MiEmpresa</span></div>
                 <p>Ofrecemos soluciones profesionales que impulsan el crecimiento de tu negocio. Nuestro compromiso es con la excelencia y la satisfacción del cliente.</p>
                 <div class="social-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
@@ -581,6 +570,7 @@
                     <a href="#"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
+            <!-- Columna 2: Enlaces rápidos -->
             <div class="footer-col">
                 <h3>Enlaces Rápidos</h3>
                 <ul>
@@ -590,6 +580,7 @@
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </div>
+            <!-- Columna 3: Enlaces a servicios -->
             <div class="footer-col">
                 <h3>Servicios</h3>
                 <ul>
@@ -599,93 +590,94 @@
                     <li><a href="#">Soluciones Cloud</a></li>
                 </ul>
             </div>
+            <!-- Columna 4: Información de contacto -->
             <div class="footer-col">
                 <h3>Contacto</h3>
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Calle Principal #123, Ciudad, País</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+1 234 567 890</p>
-                </div>
-                <div class="info-item">
-                    <i class="fab fa-whatsapp"></i>
-                    <p>+1 234 567 891</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>info@miempresa.com</p>
-                </div>
+                <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>Calle Principal #123, Ciudad, País</p></div>
+                <div class="info-item"><i class="fas fa-phone"></i><p>+1 234 567 890</p></div>
+                <div class="info-item"><i class="fab fa-whatsapp"></i><p>+1 234 567 891</p></div>
+                <div class="info-item"><i class="fas fa-envelope"></i><p>info@miempresa.com</p></div>
             </div>
         </div>
+        <!-- Línea de copyright final -->
         <div class="copyright">
             <p>&copy; 2023 MiEmpresa. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Script para Font Awesome -->
+    <!-- Script para cargar los íconos de Font Awesome -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
-    
+
+    <!-- JavaScript para la interactividad de la página -->
     <script>
-        // Navegación suave para los enlaces
+        // --- NAVEGACIÓN SUAVE (SMOOTH SCROLL) ---
+        // Selecciona todos los enlaces que apuntan a un ancla (#)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
+                e.preventDefault(); // Previene el comportamiento por defecto del enlace (el salto brusco)
+
+                const targetId = this.getAttribute('href'); // Obtiene el ID del objetivo (ej. "#servicios")
+                const targetElement = document.querySelector(targetId); // Encuentra el elemento con ese ID
+
                 if (targetElement) {
+                    // Realiza un scroll suave hasta el elemento
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
+                        top: targetElement.offsetTop - 80, // Desplaza a la posición del elemento, restando 80px para compensar la altura de la cabecera fija
+                        behavior: 'smooth' // Animación suave
                     });
-                    
-                    // Actualizar clase activa en navegación
+
+                    // --- ACTUALIZAR CLASE ACTIVA EN NAVEGACIÓN ---
+                    // Quita la clase 'active' de todos los enlaces del menú
                     document.querySelectorAll('nav a').forEach(link => {
                         link.classList.remove('active');
                     });
+                    // Añade la clase 'active' solo al enlace que se ha clickeado
                     this.classList.add('active');
                 }
             });
         });
-        
-        // Menú responsivo
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('nav ul');
-        
+
+        // --- MENÚ RESPONSIVO (HAMBURGUESA) ---
+        const menuToggle = document.querySelector('.menu-toggle'); // El botón de hamburguesa
+        const navMenu = document.querySelector('nav ul'); // El menú de navegación
+
+        // Cuando se hace clic en el botón de hamburguesa...
         menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
+            navMenu.classList.toggle('active'); // ...añade o quita la clase 'active' del menú
         });
-        
-        // Cerrar menú al hacer clic en un enlace
+
+        // --- CERRAR MENÚ AL HACER CLIC EN UN ENLACE (EN MÓVIL) ---
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
+                // Si el menú está abierto, lo cierra
                 navMenu.classList.remove('active');
             });
         });
-        
-        // Cambiar clase activa al desplazarse
+
+        // --- CAMBIAR CLASE ACTIVA AL DESPLAZARSE (SCROLLSPY) ---
+        // Se ejecuta cada vez que el usuario hace scroll
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('nav a');
-            
-            let current = '';
-            
+            const sections = document.querySelectorAll('section'); // Todas las secciones
+            const navLinks = document.querySelectorAll('nav a'); // Todos los enlaces del menú
+
+            let current = ''; // Variable para guardar el ID de la sección actual
+
             sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                
+                const sectionTop = section.offsetTop; // Posición superior de la sección
+                const sectionHeight = section.clientHeight; // Altura de la sección
+
+                // Si la posición del scroll es mayor o igual a la parte superior de la sección (menos un margen)
                 if (pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
+                    current = section.getAttribute('id'); // Guarda el ID de esta sección
                 }
             });
-            
+
+            // Recorre los enlaces del menú para actualizar la clase 'active'
             navLinks.forEach(link => {
-                link.classList.remove('active');
+                link.classList.remove('active'); // Primero quita la clase de todos
+                // Si el href del enlace coincide con la sección actual...
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
+                    link.classList.add('active'); // ...le añade la clase 'active'
                 }
             });
         });
