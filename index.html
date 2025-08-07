@@ -18,7 +18,7 @@
 
         /* Definición de variables de color para usar en toda la hoja de estilos */
         :root {
-            --color-primario: #2c3e50;   /* Color principal para fondos oscuros y texto importante */
+            --color-primario: #685800c4;   /* Color principal para fondos oscuros y texto importante */
             --color-secundario: #3498db; /* Color para enlaces, botones y acentos */
             --color-acento: #e74c3c;     /* Color para elementos que necesitan destacar (no se usa actualmente) */
             --color-texto: #333;         /* Color de texto principal sobre fondos claros */
@@ -38,7 +38,7 @@
         /* Estilo para la cabecera fija en la parte superior */
         header {
             background-color: var(--color-primario); /* Fondo oscuro */
-            color: var(--color-blanco); /* Texto blanco */
+            color: #fff260; /* Texto amarillo claro */
             padding: 1rem 5%; /* Relleno interior (arriba/abajo y a los lados) */
             display: flex; /* Usa Flexbox para alinear los elementos hijos */
             justify-content: space-between; /* Distribuye los elementos: logo a la izquierda, nav a la derecha */
@@ -117,7 +117,7 @@
 
         .seccion-titulo h2 {
             font-size: 2.5rem; /* Tamaño del título */
-            color: var(--color-primario); /* Color oscuro para el título */
+            color: #2c3e50; /* Color oscuro para el título */
             margin-bottom: 1rem; /* Espacio debajo del H2 */
         }
 
@@ -137,8 +137,8 @@
             display: flex; /* Usa Flexbox para centrar verticalmente el contenido */
             align-items: center; /* Centra verticalmente */
             /* Fondo con gradiente oscuro superpuesto a una imagen */
-            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://images.unsplash.com/photo-1497366754035-f200968a6e72?ixlib=rb-4.0.3') no-repeat center center/cover;
-            color: var(--color-blanco); /* Texto blanco sobre el fondo oscuro */
+            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
+            color: #fff260; /* Texto amarillo claro sobre el fondo oscuro */
             text-align: center; /* Centra el texto */
         }
 
@@ -240,7 +240,7 @@
         /* Estilo para cada tarjeta de servicio */
         .servicio {
             background: var(--color-fondo); /* Fondo ligeramente gris */
-            padding: 2rem;
+            padding: 4rem 2rem;
             border-radius: 10px;
             text-align: center; /* Texto centrado */
             transition: all 0.3s ease; /* Transición suave */
@@ -321,7 +321,7 @@
         /* --- PIE DE PÁGINA --- */
         footer {
             background-color: var(--color-primario); /* Fondo oscuro */
-            color: var(--color-blanco); /* Texto blanco */
+            color: #fff260; /* Texto amarillo claro */
             padding: 3rem 5%;
         }
 
@@ -514,7 +514,7 @@
                 <h2>Nuestros Servicios</h2>
                 <p>Soluciones a medida para tu negocio</p>
             </div>
-            <!-- Un grid con 6 tarjetas de servicios -->
+            <!-- Un grid con 3 tarjetas de servicios -->
             <div class="servicios-grid">
                 <div class="servicio">
                     <i class="fas fa-laptop-code"></i>
@@ -530,21 +530,6 @@
                     <i class="fas fa-chart-line"></i>
                     <h3>Marketing Digital</h3>
                     <p>Estrategias integrales de marketing digital para aumentar tu presencia online y generar leads cualificados.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Soluciones Cloud</h3>
-                    <p>Implementación y gestión de infraestructuras en la nube para optimizar tus operaciones empresariales.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Ciberseguridad</h3>
-                    <p>Protege tus datos y sistemas con nuestras soluciones avanzadas de seguridad informática.</p>
-                </div>
-                <div class="servicio">
-                    <i class="fas fa-headset"></i>
-                    <h3>Soporte Técnico</h3>
-                    <p>Asistencia técnica especializada para resolver cualquier problema de forma rápida y eficiente.</p>
                 </div>
             </div>
         </div>
@@ -565,16 +550,6 @@
                     <div class="info-item"><i class="fas fa-phone"></i><div><h3>Teléfono</h3><p>+1 234 567 890</p></div></div>
                     <div class="info-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>info@miempresa.com</p></div></div>
                     <div class="info-item"><i class="fas fa-clock"></i><div><h3>Horario</h3><p>Lunes - Viernes: 9:00 - 18:00</p><p>Sábado: 10:00 - 14:00</p></div></div>
-                </div>
-                <!-- Columna con el formulario de contacto -->
-                <div class="contacto-form">
-                    <form>
-                        <div class="form-group"><label for="nombre">Nombre Completo</label><input type="text" id="nombre" class="form-control" placeholder="Tu nombre" required></div>
-                        <div class="form-group"><label for="email">Correo Electrónico</label><input type="email" id="email" class="form-control" placeholder="tu@email.com" required></div>
-                        <div class="form-group"><label for="asunto">Asunto</label><input type="text" id="asunto" class="form-control" placeholder="Asunto del mensaje"></div>
-                        <div class="form-group"><label for="mensaje">Mensaje</label><textarea id="mensaje" class="form-control" placeholder="Tu mensaje..." required></textarea></div>
-                        <button type="submit" class="btn">Enviar Mensaje</button>
-                    </form>
                 </div>
             </div>
         </div>
