@@ -4,258 +4,221 @@
     <!-- Metadatos básicos para el navegador -->
     <meta charset="UTF-8"> <!-- Define la codificación de caracteres del documento -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace que la web sea responsive (se adapte a diferentes tamaños de pantalla) -->
-    <title>Empresa Profesional - Soluciones Innovadoras</title> <!-- Título que aparece en la pestaña del navegador -->
+    <title>Coppelia Dance Academy - Formación Integral en Ballet</title> <!-- Título que aparece en la pestaña del navegador -->
 
     <!-- Estilos CSS integrados en el HTML -->
     <style>
         /* --- RESET Y ESTILOS BASE --- */
-        /* Un reseteo básico para asegurar que todos los navegadores muestren los elementos de la misma manera */
         * {
-            margin: 0; /* Elimina el margen por defecto */
-            padding: 0; /* Elimina el padding por defecto */
-            box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho y alto total del elemento */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
 
-        /* Definición de variables de color para usar en toda la hoja de estilos */
         :root {
-            --color-primario: #685800c4;   /* Color principal para fondos oscuros y texto importante */
-            --color-secundario: #3498db; /* Color para enlaces, botones y acentos */
-            --color-acento: #e74c3c;     /* Color para elementos que necesitan destacar (no se usa actualmente) */
-            --color-texto: #333;         /* Color de texto principal sobre fondos claros */
-            --color-fondo: #f8f9fa;      /* Color de fondo general de la página */
-            --color-blanco: #fff;        /* Color blanco */
+            --color-primario: #685800c4;
+            --color-secundario: #3498db;
+            --color-acento: #e74c3c;
+            --color-texto: #333;
+            --color-fondo: #f8f9fa;
+            --color-blanco: #fff;
         }
 
-        /* Estilos generales para el cuerpo (body) de la página */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Familia de fuentes principal */
-            line-height: 1.6; /* Espaciado entre líneas para mejor legibilidad */
-            color: var(--color-texto); /* Usa la variable de color de texto */
-            background-color: var(--color-fondo); /* Usa la variable de color de fondo */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--color-texto);
+            background-color: var(--color-fondo);
         }
 
         /* --- CABECERA Y NAVEGACIÓN --- */
-        /* Estilo para la cabecera fija en la parte superior */
         header {
-            background-color: var(--color-primario); /* Fondo oscuro */
-            color: #fff260; /* Texto amarillo claro */
-            padding: 1rem 5%; /* Relleno interior (arriba/abajo y a los lados) */
-            display: flex; /* Usa Flexbox para alinear los elementos hijos */
-            justify-content: space-between; /* Distribuye los elementos: logo a la izquierda, nav a la derecha */
-            align-items: center; /* Centra verticalmente los elementos */
-            position: sticky; /* La cabecera se queda fija al hacer scroll */
-            top: 0; /* Se pega en la parte superior de la ventana */
-            z-index: 1000; /* Se asegura que la cabecera esté por encima de otros elementos */
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad */
+            background-color: var(--color-primario);
+            color: #fff260;
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* Estilo para el logo */
-        .logo {
-            font-size: 1.8rem; /* Tamaño de la fuente */
-            font-weight: bold; /* Texto en negrita */
-            display: flex; /* Usa Flexbox para alinear el ícono y el texto */
-            align-items: center; /* Centra verticalmente */
+        .logo img {
+            max-height: 60px; /* Ajusta la altura máxima del logo */
         }
 
-        .logo i {
-            margin-right: 10px; /* Espacio a la derecha del ícono */
-            color: var(--color-secundario); /* Color de acento para el ícono */
-        }
-
-        /* Estilo para la lista de navegación */
         nav ul {
-            display: flex; /* Muestra los elementos de la lista en una fila */
-            list-style: none; /* Quita los puntos de la lista */
+            display: flex;
+            list-style: none;
         }
 
         nav li {
-            margin-left: 1.5rem; /* Espacio entre los elementos del menú */
+            margin-left: 1.5rem;
         }
 
-        /* Estilo para los enlaces de navegación */
         nav a {
-            color: var(--color-blanco); /* Texto blanco */
-            text-decoration: none; /* Quita el subrayado */
-            font-weight: 500; /* Grosor de la fuente */
-            padding: 0.5rem 1rem; /* Relleno para hacer el área clickeable más grande */
-            border-radius: 4px; /* Bordes redondeados */
-            transition: all 0.3s ease; /* Transición suave para los cambios de estilo */
+            color: var(--color-blanco);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            transition: all 0.3s ease;
         }
 
-        /* Estilo para los enlaces al pasar el ratón por encima (hover) o cuando está activo */
         nav a:hover, nav a.active {
-            background-color: var(--color-secundario); /* Cambia el fondo al color secundario */
-            color: var(--color-blanco); /* Mantiene el texto blanco */
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
         }
 
-        /* Icono de menú para móviles (hamburguesa), oculto por defecto en pantallas grandes */
         .menu-toggle {
-            display: none; /* Oculto por defecto */
-            cursor: pointer; /* Cambia el cursor a una mano */
-            font-size: 1.5rem; /* Tamaño del ícono */
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
         }
 
         /* --- SECCIONES PRINCIPALES --- */
-        /* Estilo base para todas las secciones de la página */
         section {
-            padding: 5rem 5%; /* Relleno generoso para separar el contenido de los bordes */
-            min-height: 80vh; /* Altura mínima para que cada sección ocupe una buena parte de la pantalla */
+            padding: 5rem 5%;
+            min-height: 80vh;
         }
 
-        /* Contenedor principal para centrar el contenido */
         .container {
-            max-width: 1200px; /* Ancho máximo del contenido */
-            margin: 0 auto; /* Centra el contenedor horizontalmente */
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
-        /* Estilo para los títulos de cada sección */
         .seccion-titulo {
-            text-align: center; /* Centra el texto */
-            margin-bottom: 3rem; /* Espacio debajo del título */
-            position: relative; /* Necesario para el pseudo-elemento ::after */
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
         }
 
         .seccion-titulo h2 {
-            font-size: 2.5rem; /* Tamaño del título */
-            color: #2c3e50; /* Color oscuro para el título */
-            margin-bottom: 1rem; /* Espacio debajo del H2 */
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
         }
 
-        /* Línea decorativa debajo del título de la sección */
         .seccion-titulo::after {
-            content: ''; /* Obligatorio para los pseudo-elementos */
-            display: block; /* Lo convierte en un elemento de bloque */
-            width: 80px; /* Ancho de la línea */
-            height: 4px; /* Grosor de la línea */
-            background: var(--color-secundario); /* Color de la línea */
-            margin: 0 auto; /* Centra la línea */
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: var(--color-secundario);
+            margin: 0 auto;
         }
 
         /* --- SECCIÓN INICIO --- */
-        /* Estilo para la sección de bienvenida (hero) */
         #inicio {
-            display: flex; /* Usa Flexbox para centrar verticalmente el contenido */
-            align-items: center; /* Centra verticalmente */
-            /* Fondo con gradiente oscuro superpuesto a una imagen */
+            display: flex;
+            align-items: center;
             background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
-            color: #fff260; /* Texto amarillo claro sobre el fondo oscuro */
-            text-align: center; /* Centra el texto */
+            color: #fff260;
+            text-align: center;
         }
 
-        /* Contenido de la sección de inicio */
         .hero-content {
-            max-width: 800px; /* Ancho máximo para el texto */
-            margin: 0 auto; /* Centrado horizontal */
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .hero-content h1 {
-            font-size: 3.5rem; /* Tamaño grande para el titular principal */
-            margin-bottom: 1.5rem; /* Espacio debajo */
-            line-height: 1.2; /* Altura de línea ajustada */
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
         }
 
         .hero-content p {
-            font-size: 1.2rem; /* Tamaño del párrafo introductorio */
-            margin-bottom: 2rem; /* Espacio debajo */
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
         }
 
-        /* Estilo para los botones */
         .btn {
-            display: inline-block; /* Se comporta como un bloque pero se alinea en la línea */
-            background-color: var(--color-secundario); /* Color de fondo */
-            color: var(--color-blanco); /* Color de texto */
-            padding: 0.8rem 2rem; /* Relleno interior */
-            border-radius: 30px; /* Bordes muy redondeados (píldora) */
-            text-decoration: none; /* Sin subrayado */
-            font-weight: 600; /* Texto seminegrita */
-            transition: all 0.3s ease; /* Transición suave */
-            border: 2px solid var(--color-secundario); /* Borde del mismo color */
+            display: inline-block;
+            background-color: var(--color-secundario);
+            color: var(--color-blanco);
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid var(--color-secundario);
         }
 
-        /* Efecto al pasar el ratón sobre el botón */
         .btn:hover {
-            background-color: transparent; /* Fondo transparente */
-            transform: translateY(-3px); /* Se mueve ligeramente hacia arriba */
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Sombra para efecto de elevación */
+            background-color: transparent;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
 
         /* --- SECCIÓN NOSOTROS --- */
-        /* Grid para las tarjetas de "Nosotros" */
         .nosotros-grid {
-            display: grid; /* Usa CSS Grid para el layout */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas responsivas */
-            gap: 2rem; /* Espacio entre las tarjetas */
-            margin-top: 2rem; /* Espacio arriba */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center; /* Centra las tarjetas si hay espacio */
         }
 
-        /* Estilo de cada tarjeta */
         .nosotros-card {
-            background: var(--color-blanco); /* Fondo blanco */
-            border-radius: 10px; /* Bordes redondeados */
-            overflow: hidden; /* Oculta lo que se salga de la tarjeta */
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1); /* Sombra sutil */
-            transition: transform 0.3s ease; /* Transición para el efecto hover */
+            background: var(--color-blanco);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
 
         .nosotros-card:hover {
-            transform: translateY(-10px); /* Se eleva al pasar el ratón */
+            transform: translateY(-10px);
         }
 
-        /* Imagen o ícono de la tarjeta */
         .card-img {
-            height: 200px; /* Altura fija */
-            background-color: var(--color-secundario); /* Fondo de color */
+            height: 200px;
+            background-color: #f0f0f0; /* Color de fondo mientras carga la imagen */
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .card-img i {
-            font-size: 4rem; /* Tamaño grande para el ícono */
-            color: var(--color-blanco); /* Ícono blanco */
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
         }
 
-        /* Contenido de texto de la tarjeta */
         .card-content {
-            padding: 1.5rem; /* Relleno interior */
+            padding: 1.5rem;
         }
 
         .card-content h3 {
-            color: var(--color-primario); /* Título oscuro */
-            margin-bottom: 1rem; /* Espacio debajo */
+            color: var(--color-primario);
+            margin-bottom: 1rem;
         }
 
         /* --- SECCIÓN SERVICIOS --- */
         #servicios {
-            background-color: var(--color-blanco); /* Fondo blanco para esta sección */
+            background-color: var(--color-blanco);
         }
 
-        /* Grid para las tarjetas de servicios */
         .servicios-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
-        /* Estilo para cada tarjeta de servicio */
         .servicio {
-            background: var(--color-fondo); /* Fondo ligeramente gris */
+            background: var(--color-fondo);
             padding: 4rem 2rem;
             border-radius: 10px;
-            text-align: center; /* Texto centrado */
-            transition: all 0.3s ease; /* Transición suave */
-            border-left: 4px solid var(--color-secundario); /* Borde izquierdo de acento */
+            text-align: center;
+            transition: all 0.3s ease;
         }
 
         .servicio:hover {
-            transform: translateY(-10px); /* Se eleva al pasar el ratón */
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra más pronunciada */
-        }
-
-        .servicio i {
-            font-size: 3rem; /* Tamaño del ícono */
-            color: var(--color-secundario); /* Color de acento */
-            margin-bottom: 1.5rem; /* Espacio debajo */
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
         }
 
         .servicio h3 {
@@ -264,77 +227,20 @@
             color: var(--color-primario);
         }
 
-        /* --- FORMULARIO DE CONTACTO --- */
-        /* Contenedor para la información de contacto y el formulario */
-        .contacto-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-        }
-
-        /* Columna de información de contacto */
-        .contacto-info {
-            display: flex;
-            flex-direction: column; /* Elementos en columna */
-            gap: 1.5rem; /* Espacio entre ítems */
-        }
-
-        .info-item {
-            display: flex;
-            align-items: flex-start; /* Alinea íconos y texto */
-            gap: 1rem;
-        }
-
-        .info-item i {
-            font-size: 1.5rem;
-            color: var(--color-secundario);
-            margin-top: 5px;
-        }
-
-        /* Estilos para el formulario */
-        .form-group {
-            margin-bottom: 1.5rem; /* Espacio entre campos del formulario */
-        }
-
-        .form-group label {
-            display: block; /* La etiqueta ocupa su propia línea */
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        /* Estilo para los campos de texto y email */
-        .form-control {
-            width: 100%; /* Ocupa todo el ancho disponible */
-            padding: 0.8rem;
-            border: 1px solid #ddd; /* Borde sutil */
-            border-radius: 4px;
-            font-family: inherit; /* Usa la misma fuente que el resto de la página */
-            font-size: 1rem;
-        }
-
-        /* Estilo específico para el área de texto (mensaje) */
-        textarea.form-control {
-            min-height: 150px; /* Altura mínima */
-            resize: vertical; /* Permite al usuario cambiar la altura verticalmente */
-        }
-
         /* --- PIE DE PÁGINA --- */
         footer {
-            background-color: var(--color-primario); /* Fondo oscuro */
-            color: #fff260; /* Texto amarillo claro */
+            background-color: var(--color-primario);
+            color: #fff260;
             padding: 3rem 5%;
         }
 
-        /* Contenedor del pie de página con varias columnas */
         .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
-            gap: 2rem;
+            display: flex;
+            justify-content: center; /* Centra la única columna */
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Títulos en el pie de página */
         .footer-col h3 {
             font-size: 1.5rem;
             margin-bottom: 1.5rem;
@@ -342,7 +248,6 @@
             padding-bottom: 0.5rem;
         }
 
-        /* Línea decorativa para los títulos del pie de página */
         .footer-col h3::after {
             content: '';
             position: absolute;
@@ -357,76 +262,48 @@
             margin-bottom: 1rem;
         }
 
-        /* Enlaces a redes sociales */
-        .social-links {
-            display: flex;
-            gap: 1rem; /* Espacio entre íconos */
-            margin-top: 1rem;
+        .footer-col .info-item {
+             display: flex;
+             align-items: center;
+             gap: 10px;
+             margin-bottom: 1rem;
         }
 
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1); /* Fondo semitransparente */
-            color: var(--color-blanco);
-            border-radius: 50%; /* Círculo perfecto */
-            transition: all 0.3s ease;
-        }
-
-        .social-links a:hover {
-            background-color: var(--color-secundario); /* Cambia de color al pasar el ratón */
-            transform: translateY(-5px); /* Se eleva ligeramente */
-        }
-
-        /* Copyright al final del pie de página */
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            margin-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1); /* Línea divisoria sutil */
+        .footer-col .info-item i {
+            font-size: 1.2rem;
         }
 
         /* --- RESPONSIVE --- */
-        /* Media Query para pantallas pequeñas (móviles) */
         @media (max-width: 768px) {
-            /* Muestra el ícono de menú hamburguesa */
             .menu-toggle {
                 display: block;
             }
 
-            /* Oculta el menú de navegación por defecto en móviles */
             nav ul {
-                position: absolute; /* Posición absoluta para superponerse al contenido */
-                top: 100%; /* Justo debajo de la cabecera */
+                position: absolute;
+                top: 100%;
                 left: 0;
                 width: 100%;
                 background-color: var(--color-primario);
-                flex-direction: column; /* Menú en columna */
+                flex-direction: column;
                 align-items: center;
                 padding: 1rem 0;
-                /* Animación para desplegar el menú */
-                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0); /* Oculto (sin altura) */
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
                 transition: all 0.4s ease;
             }
 
-            /* Muestra el menú cuando tiene la clase 'active' (controlado por JS) */
             nav ul.active {
-                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); /* Visible (altura completa) */
+                clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
 
             nav li {
-                margin: 0.5rem 0; /* Ajusta el margen para la vista en columna */
+                margin: 0.5rem 0;
             }
 
-            /* Ajusta el tamaño del titular principal en móviles */
             .hero-content h1 {
                 font-size: 2.5rem;
             }
 
-            /* Reduce el padding de las secciones en móviles */
             section {
                 padding: 3rem 5%;
             }
@@ -436,16 +313,12 @@
 <body>
     <!-- Cabecera con logo y menú de navegación -->
     <header>
-        <!-- Logo de la empresa -->
         <div class="logo">
-            <i class="fas fa-rocket"></i> <!-- Icono de Font Awesome -->
-            <span>MiEmpresa</span>
+            <img src="https://i.postimg.cc/LHcB1Bnx/Whats-App-Image-2025-08-21-at-4-52-46-PM-1.jpg" alt="Coppelia Dance Academy Logo">
         </div>
-        <!-- Botón de menú para dispositivos móviles (hamburguesa) -->
         <div class="menu-toggle">
-            <i class="fas fa-bars"></i> <!-- Icono de Font Awesome -->
+            <i class="fas fa-bars"></i>
         </div>
-        <!-- Menú de navegación principal -->
         <nav>
             <ul>
                 <li><a href="#inicio" class="active">Inicio</a></li>
@@ -456,50 +329,39 @@
         </nav>
     </header>
 
-    <!-- Sección de Inicio (Hero) -->
-    <!-- Esta es la primera sección que ven los visitantes -->
+    <!-- Sección de Inicio -->
     <section id="inicio">
         <div class="container">
             <div class="hero-content">
-                <h1>Soluciones Profesionales para tu Negocio</h1>
-                <p>Ofrecemos servicios de alta calidad que impulsarán el crecimiento de tu empresa. Nuestro equipo de expertos está listo para ayudarte a alcanzar tus objetivos.</p>
-                <a href="#servicios" class="btn">Nuestros Servicios</a>
+                <h1>Persigue tus sueños, incluso siendo diferente a lo comun</h1>
+                <p>Ofrecemos un programa de formación en ballet de alta calidad, diseñado para los niveles de iniciación, intermedio y avanzado. Nuestro enfoque integra el desarrollo técnico, artístico, escénico y personal, brindando a cada estudiante una experiencia formativa integral. Creemos firmemente que el arte debe ser accesible para todos, por eso ofrecemos precios asequibles y un espacio inclusivo, donde la condición económica o física no sea una barrera. Nuestro propósito es formar y dar oportunidades a todas las personas, con especial compromiso en educar y valorar los cuerpos latinoamericanos, históricamente excluidos de procesos de formación de calidad y de proyección laboral en la danza.</p>
             </div>
         </div>
     </section>
 
     <!-- Sección Nosotros -->
-    <!-- Presenta información sobre la empresa, su historia, misión y visión -->
     <section id="nosotros">
         <div class="container">
             <div class="seccion-titulo">
                 <h2>Sobre Nosotros</h2>
-                <p>Conoce nuestra historia y valores</p>
             </div>
-            <!-- Un grid con 3 tarjetas -->
             <div class="nosotros-grid">
-                <!-- Tarjeta 1: Historia -->
                 <div class="nosotros-card">
-                    <div class="card-img"><i class="fas fa-history"></i></div>
-                    <div class="card-content">
-                        <h3>Nuestra Historia</h3>
-                        <p>Fundada en 2010, nuestra empresa ha crecido de manera constante, adaptándose a las necesidades cambiantes del mercado y manteniendo siempre nuestro compromiso con la calidad.</p>
+                    <div class="card-img">
+                        <img src="https://i.postimg.cc/JmPHw5MS/Whats-App-Image-2025-08-21-at-5-05-28-PM.jpg" alt="Misión de la academia">
                     </div>
-                </div>
-                <!-- Tarjeta 2: Misión -->
-                <div class="nosotros-card">
-                    <div class="card-img"><i class="fas fa-bullseye"></i></div>
                     <div class="card-content">
                         <h3>Nuestra Misión</h3>
-                        <p>Proporcionar soluciones innovadoras y de alta calidad que impulsen el éxito de nuestros clientes, creando relaciones duraderas basadas en la confianza y el valor añadido.</p>
+                        <p>La misión de la empresa es poder contribuir a la igualdad en el mundo de la danza, ya que en este mundo se les otorga muchas menos oportunidades a personas no estereotípicas, de bajos recursos y minorías, entonces la empresa toma como misión contribuir a generar más igualdad en el mundo de la danza a través de ofrecer oportunidades a estos grupos marginados.</p>
                     </div>
                 </div>
-                <!-- Tarjeta 3: Visión -->
                 <div class="nosotros-card">
-                    <div class="card-img"><i class="fas fa-eye"></i></div>
+                    <div class="card-img">
+                        <img src="https://i.postimg.cc/2m83xLhG/Whats-App-Image-2025-08-21-at-5-05-27-PM.jpg" alt="Visión de la academia">
+                    </div>
                     <div class="card-content">
                         <h3>Nuestra Visión</h3>
-                        <p>Ser reconocidos como líderes en nuestro sector, destacando por nuestra excelencia operativa, innovación constante y compromiso con el desarrollo sostenible.</p>
+                        <p>La visión de la empresa es llegar a ser una escuela con varias sedes en la ciudad de Bogotá, reconocida, con muchas alianzas con compañías para ofrecer oportunidades de trabajo a bailarines, y llegar haber cambiado la vida de algún bailarín y aportado a la igualdad en el mundo de la danza.</p>
                     </div>
                 </div>
             </div>
@@ -507,177 +369,115 @@
     </section>
 
     <!-- Sección Servicios -->
-    <!-- Muestra los diferentes servicios que ofrece la empresa -->
     <section id="servicios">
         <div class="container">
             <div class="seccion-titulo">
                 <h2>Nuestros Servicios</h2>
-                <p>Soluciones a medida para tu negocio</p>
             </div>
-            <!-- Un grid con 3 tarjetas de servicios -->
             <div class="servicios-grid">
                 <div class="servicio">
-                    <i class="fas fa-laptop-code"></i>
-                    <h3>Desarrollo Web</h3>
-                    <p>Diseño y desarrollo de sitios web profesionales, responsivos y optimizados para motores de búsqueda.</p>
+                    <h3>Programa iniciación</h3>
+                    <p>Ofrecemos un programa diseñado para personas que desean dar sus primeros pasos en la danza clásica. Nuestro enfoque inclusivo permite desarrollar, desde lo más básico, las habilidades fundamentales de esta disciplina, sin importar la edad ni la condición física previa.</p>
                 </div>
                 <div class="servicio">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Aplicaciones Móviles</h3>
-                    <p>Creación de aplicaciones nativas e híbridas para iOS y Android que mejoran la experiencia del usuario.</p>
+                    <h3>Programa intermedio</h3>
+                    <p>Es un programa único que busca formar bailarines en nivel intermedio de manera integral y completa, que se sepan desenvolver en todos los ámbitos y cuenten con las habilidades necesarias para estar en un nivel avanzado, sin restricción de edad, para cualquier tipo de cuerpo o situación económica, desarrola múltiples habilidades no solo las de ballet.</p>
                 </div>
                 <div class="servicio">
-                    <i class="fas fa-chart-line"></i>
-                    <h3>Marketing Digital</h3>
-                    <p>Estrategias integrales de marketing digital para aumentar tu presencia online y generar leads cualificados.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección Contacto -->
-    <!-- Contiene información de contacto y un formulario -->
-    <section id="contacto">
-        <div class="container">
-            <div class="seccion-titulo">
-                <h2>Contáctanos</h2>
-                <p>Estamos listos para ayudarte</p>
-            </div>
-            <div class="contacto-container">
-                <!-- Columna con la información de contacto (dirección, teléfono, etc.) -->
-                <div class="contacto-info">
-                    <div class="info-item"><i class="fas fa-map-marker-alt"></i><div><h3>Ubicación</h3><p>Calle Principal #123, Ciudad, País</p></div></div>
-                    <div class="info-item"><i class="fas fa-phone"></i><div><h3>Teléfono</h3><p>+1 234 567 890</p></div></div>
-                    <div class="info-item"><i class="fas fa-envelope"></i><div><h3>Email</h3><p>info@miempresa.com</p></div></div>
-                    <div class="info-item"><i class="fas fa-clock"></i><div><h3>Horario</h3><p>Lunes - Viernes: 9:00 - 18:00</p><p>Sábado: 10:00 - 14:00</p></div></div>
+                    <h3>Programa avanzado</h3>
+                    <p>Nuestro Programa Integral de Ballet es estricto y retador, formando bailarines avanzados con la condición física, versatilidad y experiencia necesarias para adaptarse a cualquier estilo. Es inclusivo y rompe estereotipos: aquí el cuerpo no es un límite, sino una herramienta para la danza.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Pie de página -->
-    <!-- Contiene información final, enlaces y copyright -->
-    <footer>
+    <footer id="contacto">
         <div class="footer-container">
-            <!-- Columna 1: Logo y descripción -->
-            <div class="footer-col">
-                <div class="logo"><i class="fas fa-rocket"></i><span>MiEmpresa</span></div>
-                <p>Ofrecemos soluciones profesionales que impulsan el crecimiento de tu negocio. Nuestro compromiso es con la excelencia y la satisfacción del cliente.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-            </div>
-            <!-- Columna 2: Enlaces rápidos -->
-            <div class="footer-col">
-                <h3>Enlaces Rápidos</h3>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#nosotros">Nosotros</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
-            <!-- Columna 3: Enlaces a servicios -->
-            <div class="footer-col">
-                <h3>Servicios</h3>
-                <ul>
-                    <li><a href="#">Desarrollo Web</a></li>
-                    <li><a href="#">Aplicaciones Móviles</a></li>
-                    <li><a href="#">Marketing Digital</a></li>
-                    <li><a href="#">Soluciones Cloud</a></li>
-                </ul>
-            </div>
-            <!-- Columna 4: Información de contacto -->
             <div class="footer-col">
                 <h3>Contacto</h3>
-                <div class="info-item"><i class="fas fa-map-marker-alt"></i><p>Calle Principal #123, Ciudad, País</p></div>
-                <div class="info-item"><i class="fas fa-phone"></i><p>+1 234 567 890</p></div>
-                <div class="info-item"><i class="fab fa-whatsapp"></i><p>+1 234 567 891</p></div>
-                <div class="info-item"><i class="fas fa-envelope"></i><p>info@miempresa.com</p></div>
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>polo,bogota</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>3158623191</p>
+                </div>
+                <div class="info-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>3158623191</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>ariadnacatral@gmail.com</p>
+                </div>
             </div>
-        </div>
-        <!-- Línea de copyright final -->
-        <div class="copyright">
-            <p>&copy; 2023 MiEmpresa. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!-- Script para cargar los íconos de Font Awesome -->
+    <!-- Script para Font Awesome (necesario para los íconos) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
 
     <!-- JavaScript para la interactividad de la página -->
     <script>
         // --- NAVEGACIÓN SUAVE (SMOOTH SCROLL) ---
-        // Selecciona todos los enlaces que apuntan a un ancla (#)
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
-                e.preventDefault(); // Previene el comportamiento por defecto del enlace (el salto brusco)
+                e.preventDefault();
 
-                const targetId = this.getAttribute('href'); // Obtiene el ID del objetivo (ej. "#servicios")
-                const targetElement = document.querySelector(targetId); // Encuentra el elemento con ese ID
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
 
                 if (targetElement) {
-                    // Realiza un scroll suave hasta el elemento
                     window.scrollTo({
-                        top: targetElement.offsetTop - 80, // Desplaza a la posición del elemento, restando 80px para compensar la altura de la cabecera fija
-                        behavior: 'smooth' // Animación suave
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
                     });
 
-                    // --- ACTUALIZAR CLASE ACTIVA EN NAVEGACIÓN ---
-                    // Quita la clase 'active' de todos los enlaces del menú
                     document.querySelectorAll('nav a').forEach(link => {
                         link.classList.remove('active');
                     });
-                    // Añade la clase 'active' solo al enlace que se ha clickeado
                     this.classList.add('active');
                 }
             });
         });
 
         // --- MENÚ RESPONSIVO (HAMBURGUESA) ---
-        const menuToggle = document.querySelector('.menu-toggle'); // El botón de hamburguesa
-        const navMenu = document.querySelector('nav ul'); // El menú de navegación
+        const menuToggle = document.querySelector('.menu-toggle');
+        const navMenu = document.querySelector('nav ul');
 
-        // Cuando se hace clic en el botón de hamburguesa...
         menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active'); // ...añade o quita la clase 'active' del menú
+            navMenu.classList.toggle('active');
         });
 
         // --- CERRAR MENÚ AL HACER CLIC EN UN ENLACE (EN MÓVIL) ---
         document.querySelectorAll('nav a').forEach(link => {
             link.addEventListener('click', () => {
-                // Si el menú está abierto, lo cierra
                 navMenu.classList.remove('active');
             });
         });
 
         // --- CAMBIAR CLASE ACTIVA AL DESPLAZARSE (SCROLLSPY) ---
-        // Se ejecuta cada vez que el usuario hace scroll
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section'); // Todas las secciones
-            const navLinks = document.querySelectorAll('nav a'); // Todos los enlaces del menú
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
 
-            let current = ''; // Variable para guardar el ID de la sección actual
+            let current = '';
 
             sections.forEach(section => {
-                const sectionTop = section.offsetTop; // Posición superior de la sección
-                const sectionHeight = section.clientHeight; // Altura de la sección
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
 
-                // Si la posición del scroll es mayor o igual a la parte superior de la sección (menos un margen)
                 if (pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id'); // Guarda el ID de esta sección
+                    current = section.getAttribute('id');
                 }
             });
 
-            // Recorre los enlaces del menú para actualizar la clase 'active'
             navLinks.forEach(link => {
-                link.classList.remove('active'); // Primero quita la clase de todos
-                // Si el href del enlace coincide con la sección actual...
+                link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active'); // ...le añade la clase 'active'
+                    link.classList.add('active');
                 }
             });
         });
