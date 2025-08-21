@@ -22,6 +22,7 @@
             --color-texto: #333;
             --color-fondo: #f8f9fa;
             --color-blanco: #fff;
+            --color-texto-secundario: #101010; /* Color de texto secundario */
         }
 
         body {
@@ -34,7 +35,7 @@
         /* --- CABECERA Y NAVEGACIÓN --- */
         header {
             background-color: var(--color-primario);
-            color: #fff260;
+            color: var(--color-blanco);
             padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
@@ -97,7 +98,7 @@
 
         .seccion-titulo h2 {
             font-size: 2.5rem;
-            color: #2c3e50;
+            color: var(--color-texto);
             margin-bottom: 1rem;
         }
 
@@ -114,8 +115,8 @@
         #inicio {
             display: flex;
             align-items: center;
-            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
-            color: #fff260;
+            background: url('https://postimg.cc/87ys52pV') ; /* Nueva imagen de fondo sin gradiente */
+
             text-align: center;
         }
 
@@ -125,13 +126,13 @@
         }
 
         .hero-content h1 {
-            font-size: 3.5rem;
+            font-size: 2.5rem; /* Reducido de 3.5rem */
             margin-bottom: 1.5rem;
             line-height: 1.2;
         }
 
         .hero-content p {
-            font-size: 1.2rem;
+            font-size: 1rem; /* Reducido de 1.2rem */
             margin-bottom: 2rem;
         }
 
@@ -230,7 +231,7 @@
         /* --- PIE DE PÁGINA --- */
         footer {
             background-color: var(--color-primario);
-            color: #fff260;
+            color: var(--color-blanco);
             padding: 3rem 5%;
         }
 
@@ -263,10 +264,10 @@
         }
 
         .footer-col .info-item {
-             display: flex;
-             align-items: center;
-             gap: 10px;
-             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 1rem;
         }
 
         .footer-col .info-item i {
@@ -333,7 +334,7 @@
     <section id="inicio">
         <div class="container">
             <div class="hero-content">
-                <h1>Persigue tus sueños, incluso siendo diferente a lo comun</h1>
+                <h1>Persigue tus sueños, incluso siendo diferente a lo común</h1>
                 <p>Ofrecemos un programa de formación en ballet de alta calidad, diseñado para los niveles de iniciación, intermedio y avanzado. Nuestro enfoque integra el desarrollo técnico, artístico, escénico y personal, brindando a cada estudiante una experiencia formativa integral. Creemos firmemente que el arte debe ser accesible para todos, por eso ofrecemos precios asequibles y un espacio inclusivo, donde la condición económica o física no sea una barrera. Nuestro propósito es formar y dar oportunidades a todas las personas, con especial compromiso en educar y valorar los cuerpos latinoamericanos, históricamente excluidos de procesos de formación de calidad y de proyección laboral en la danza.</p>
             </div>
         </div>
@@ -352,7 +353,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Nuestra Misión</h3>
-                        <p>La misión de la empresa es poder contribuir a la igualdad en el mundo de la danza, ya que en este mundo se les otorga muchas menos oportunidades a personas no estereotípicas, de bajos recursos y minorías, entonces la empresa toma como misión contribuir a generar más igualdad en el mundo de la danza a través de ofrecer oportunidades a estos grupos marginados.</p>
+                        <p>La misión de la empresa es poder contribuir a la igualdad en el mundo de la danza, ya que en este mundo se les otorgan muchas menos oportunidades a personas no estereotípicas, de bajos recursos y minorías, entonces la empresa toma como misión contribuir a generar más igualdad en el mundo de la danza a través de ofrecer oportunidades a estos grupos marginados.</p>
                     </div>
                 </div>
                 <div class="nosotros-card">
@@ -361,7 +362,7 @@
                     </div>
                     <div class="card-content">
                         <h3>Nuestra Visión</h3>
-                        <p>La visión de la empresa es llegar a ser una escuela con varias sedes en la ciudad de Bogotá, reconocida, con muchas alianzas con compañías para ofrecer oportunidades de trabajo a bailarines, y llegar haber cambiado la vida de algún bailarín y aportado a la igualdad en el mundo de la danza.</p>
+                        <p>La visión de la empresa es llegar a ser una escuela con varias sedes en la ciudad de Bogotá, reconocida, con muchas alianzas con compañías para ofrecer oportunidades de trabajo a bailarines, y llegar a haber cambiado la vida de algún bailarín y aportado a la igualdad en el mundo de la danza.</p>
                     </div>
                 </div>
             </div>
@@ -381,7 +382,7 @@
                 </div>
                 <div class="servicio">
                     <h3>Programa intermedio</h3>
-                    <p>Es un programa único que busca formar bailarines en nivel intermedio de manera integral y completa, que se sepan desenvolver en todos los ámbitos y cuenten con las habilidades necesarias para estar en un nivel avanzado, sin restricción de edad, para cualquier tipo de cuerpo o situación económica, desarrola múltiples habilidades no solo las de ballet.</p>
+                    <p>Es un programa único que busca formar bailarines en nivel intermedio de manera integral y completa, que se sepan desenvolver en todos los ámbitos y cuenten con las habilidades necesarias para estar en un nivel avanzado, sin restricción de edad, para cualquier tipo de cuerpo o situación económica, desarrolla múltiples habilidades no solo las de ballet.</p>
                 </div>
                 <div class="servicio">
                     <h3>Programa avanzado</h3>
@@ -398,7 +399,7 @@
                 <h3>Contacto</h3>
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
-                    <p>polo,bogota</p>
+                    <p>Polo, Bogotá</p>
                 </div>
                 <div class="info-item">
                     <i class="fas fa-phone"></i>
