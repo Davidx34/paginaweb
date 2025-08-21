@@ -38,7 +38,7 @@
         /* Estilo para la cabecera fija en la parte superior */
         header {
             background-color: var(--color-primario); /* Fondo oscuro */
-            color: #fff260; /* Texto amarillo claro */
+            color: #101010; /* Texto amarillo claro */
             padding: 1rem 5%; /* Relleno interior (arriba/abajo y a los lados) */
             display: flex; /* Usa Flexbox para alinear los elementos hijos */
             justify-content: space-between; /* Distribuye los elementos: logo a la izquierda, nav a la derecha */
@@ -58,7 +58,7 @@
 
         .logo i {
             margin-right: 10px; /* Espacio a la derecha del ícono */
-            color: var(--color-secundario); /* Color de acento para el ícono */
+            color: var(--color-texto); /* Color de acento para el ícono */
         }
 
         /* Estilo para la lista de navegación */
@@ -83,7 +83,7 @@
 
         /* Estilo para los enlaces al pasar el ratón por encima (hover) o cuando está activo */
         nav a:hover, nav a.active {
-            background-color: var(--color-secundario); /* Cambia el fondo al color secundario */
+            background-color: var(--color-texto); /* Cambia el fondo al color secundario */
             color: var(--color-blanco); /* Mantiene el texto blanco */
         }
 
@@ -136,8 +136,8 @@
             display: flex; /* Usa Flexbox para centrar verticalmente el contenido */
             align-items: center; /* Centra verticalmente */
             /* Fondo con gradiente oscuro superpuesto a una imagen */
-            background: linear-gradient(135deg, rgba(44,62,80,0.9) 0%, rgba(52,152,219,0.8) 100%), url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
-            color: #fff260; /* Texto amarillo claro sobre el fondo oscuro */
+            background:url('https://i.postimg.cc/XV16KWY6/banner1-1.png') no-repeat center center/cover;
+            color: #20201e; /* Texto amarillo claro sobre el fondo oscuro */
             text-align: center; /* Centra el texto */
         }
 
@@ -161,14 +161,14 @@
         /* Estilo para los botones */
         .btn {
             display: inline-block; /* Se comporta como un bloque pero se alinea en la línea */
-            background-color: var(--color-secundario); /* Color de fondo */
+            background-color: var(--color-texto); /* Color de fondo */
             color: var(--color-blanco); /* Color de texto */
             padding: 0.8rem 2rem; /* Relleno interior */
             border-radius: 30px; /* Bordes muy redondeados (píldora) */
             text-decoration: none; /* Sin subrayado */
             font-weight: 600; /* Texto seminegrita */
             transition: all 0.3s ease; /* Transición suave */
-            border: 2px solid var(--color-secundario); /* Borde del mismo color */
+            border: 2px solid var(--color-texto); /* Borde del mismo color */
         }
 
         /* Efecto al pasar el ratón sobre el botón */
@@ -437,8 +437,8 @@
     <header>
         <!-- Logo de la empresa -->
         <div class="logo">
-            <i class="fas fa-rocket"></i> <!-- Icono de Font Awesome -->
-            <span>MiEmpresa</span>
+            <i class="fas fa-eye"></i> <!-- Icono de Font Awesome cambiado a maletín -->
+            <span>Ari es rata</span>
         </div>
         <!-- Botón de menú para dispositivos móviles (hamburguesa) -->
         <div class="menu-toggle">
